@@ -3,33 +3,33 @@ using namespace std;
 
 int main()
 {
-	int N = 956;
+	short N = 157;
 
 	__asm
 	{
-		mov eax, N
-		mov ecx, 10
+		mov ax, N
+		mov cx, 10
 
-		; Извлекаем единицы
-		xor edx, edx
-		div ecx
-		mov ebx, edx
+		; РР·РІР»РµРєР°РµРј РµРґРёРЅРёС†С‹
+		xor dx, dx
+		div cx
+		mov bx, dx
 
-		; Извлекаем десятки
-		imul ebx, 10
-		xor edx, edx
-		div ecx
-		add ebx, edx
+		; РР·РІР»РµРєР°РµРј РґРµСЃСЏС‚РєРё
+		imul bx, 10
+		xor dx, dx
+		div cx
+		add bx, dx
 
-		; Извлекаем сотни
-		imul ebx, 10
-		add ebx, eax
+		; РР·РІР»РµРєР°РµРј СЃРѕС‚РЅРё
+		imul bx, 10
+		add bx, ax
 
-		mov N, ebx
+		mov N, bx
 
 	}
 
-	cout << "Result: " << N << endl;
+	cout << "Result: " << (int)N << endl;
 	return 0;
 
 }

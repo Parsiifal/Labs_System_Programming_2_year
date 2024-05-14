@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
 	int T = 0;
-	char H = 20, M = 13, S = 49;
+	char H = 22, M = 48, S = 59;
 
 	__asm
 	{
@@ -19,6 +19,7 @@ int main()
 		add eax, ebx
 		add eax, ecx
 		mov T, eax
+
 	}
 
 	cout << "Result: " << T << endl;
